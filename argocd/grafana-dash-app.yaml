@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana-dashboards-labs
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/steevivo/observability-lab.git
+    targetRevision: feature/grafana-dashboards-sidecar
+    path: grafana-dash/labs
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: observability
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
