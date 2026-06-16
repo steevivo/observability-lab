@@ -11,4 +11,4 @@ generatorOptions:
 configMapGenerator:
   - name: grafana-dashboard-k8s-health-overview
     files:
-      - k8s-health-overview.json=./dashboards/kubernetes/k8s-health-overview.json
+      - k8s-health-overview.json=./dashboards/kubernetes/coredns.json
