@@ -9,6 +9,6 @@ generatorOptions:
     grafana_dashboard: "1"
 
 configMapGenerator:
-  - name: grafana-dashboard-k8s-health-overview
+  - name: argocd_core_dns
     files:
-      - k8s-health-overview.json=./dashboards/kubernetes/coredns.json
+      - coredns.json=./dashboards/kubernetes/coredns.json
